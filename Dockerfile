@@ -1,6 +1,6 @@
 FROM node:20
 
-WORKDIR /learn-docker
+WORKDIR /learn-docker-deployment
 
 COPY package*.json ./
 
