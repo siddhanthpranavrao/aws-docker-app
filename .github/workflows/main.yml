@@ -22,4 +22,4 @@ jobs:
           script: |
             cd /home/ec2-user/project/aws-docker-app
             sudo docker build -t learn-docker-deployment:latest .
-            docker run -d -p 80:8080 learn-docker-deployment:latest
+            sudo docker run -d -p 80:8080 learn-docker-deployment:latest
