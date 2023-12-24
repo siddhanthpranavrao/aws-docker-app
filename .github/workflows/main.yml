@@ -22,8 +22,8 @@ jobs:
           script: |
             cd /home/ec2-user/project/aws-docker-app
             
-            sudo docker stop learn-docker-deployment:latest || true
-            sudo docker rm learn-docker-deployment:latest || true
+            sudo docker stop learn-docker-deployment || true
+            sudo docker rm learn-docker-deployment || true
             
             sudo docker build -t learn-docker-deployment:latest .
-            sudo docker run -d -p 80:8080 learn-docker-deployment:latest
+            sudo docker run -d -p 80:8080 --name learn-docker-deployment learn-docker-deployment:latest
