@@ -21,6 +21,8 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
             cd /home/ec2-user/project/aws-docker-app
+
+            git pull origin main
             
             sudo docker stop learn-docker-deployment || true
             sudo docker rm learn-docker-deployment || true
